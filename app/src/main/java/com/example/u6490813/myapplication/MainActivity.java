@@ -42,11 +42,11 @@ public class MainActivity extends AppCompatActivity {
         if(!TextUtils.isEmpty(text)){
             // if input text is not empty, set text into textView and clear editText
             tv.setText(text);
-            //et.getText().clear();
+            et.getText().clear();
         }
         else{
             // else set textView to empty and pop-up feedback bar to user
-            //tv.setText(null);
+            tv.setText(null);
             Snackbar.make(view,"Fill in empty field",Snackbar.LENGTH_SHORT).show();
         }
     }
