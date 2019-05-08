@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoteActivity">
+
+    <View
+        android:id="@+id/note_view_content"
+        android:layout_width="359dp"
+        android:layout_height="281dp"
+        android:alpha="0.3"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/note_et_content"
+        app:layout_constraintEnd_toEndOf="@+id/note_et_content"
+        app:layout_constraintStart_toStartOf="@+id/note_et_content"
+        app:layout_constraintTop_toTopOf="@+id/note_et_content" />
+
+    <View
+        android:id="@+id/note_view_title"
+        android:layout_width="360dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:alpha="0.3"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/note_et_title"
+        app:layout_constraintEnd_toEndOf="@+id/note_et_title"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/note_et_title"
+        app:layout_constraintTop_toTopOf="@+id/note_et_title"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/note_et_content"
+        android:layout_width="366dp"
+        android:layout_height="286dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:gravity="center|top"
+        android:hint="Type Documentations Here"
+        android:padding="32dp"
+        android:textColorHint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.413"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41" />
+
+    <EditText
+        android:id="@+id/note_et_title"
+        android:layout_width="362dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Type Title Here"
+        android:inputType="textPersonName"
+        android:textColorHint="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/note_et_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/saveNote"
+        android:layout_width="85dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:onClick="note_save_button"
+        android:text="Save"
+        app:layout_constraintStart_toStartOf="@+id/note_et_content"
+        app:layout_constraintTop_toBottomOf="@+id/note_et_content" />
+
+    <Button
+        android:id="@+id/clearNote"
+        android:layout_width="98dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:onClick="note_clear_button"
+        android:text="Clear"
+        app:layout_constraintStart_toEndOf="@+id/deleteNote"
+        app:layout_constraintTop_toBottomOf="@+id/note_et_content" />
+
+    <Button
+        android:id="@+id/cancelNote"
+        android:layout_width="85dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="note_cancel_button"
+        android:text="Cancel"
+        app:layout_constraintEnd_toEndOf="@+id/note_view_content"
+        app:layout_constraintStart_toEndOf="@+id/clearNote"
+        app:layout_constraintTop_toBottomOf="@+id/note_et_content" />
+
+    <Button
+        android:id="@+id/deleteNote"
+        android:layout_width="95dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:onClick="note_delete_button"
+        android:text="Delete"
+        app:layout_constraintStart_toEndOf="@+id/saveNote"
+        app:layout_constraintTop_toBottomOf="@+id/note_et_content" />
+
+
+</android.support.constraint.ConstraintLayout>

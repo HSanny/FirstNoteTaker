@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Add New Note -->
+    <item
+        android:enabled="true"
+        android:title="create"
+        android:icon="@android:drawable/ic_menu_add"
+        android:id="@+id/action_main_create_new_note"
+        android:orderInCategory="0"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:enabled="true"
+        android:title="delete"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:id="@+id/action_main_delete_note"
+        android:orderInCategory="0"
+        app:showAsAction="always"
+        />
+
+
+</menu>
