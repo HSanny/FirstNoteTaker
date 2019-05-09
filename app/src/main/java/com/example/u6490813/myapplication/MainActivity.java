@@ -159,14 +159,15 @@ public class MainActivity extends AppCompatActivity {
                         if (swipeDetector.getAction() == SwipeDetector.Action.Right_To_Left || swipeDetector.getAction() == SwipeDetector.Action.Left_To_Right) {
                             final String mNoteToDelName = ((Note) mListViewNotes.getItemAtPosition(position)).getmDateTime()
                                     + Utilities.FILE_EXTENSION;
+                            final Note noteToDel = Utilities.loadNoteByName(MainActivity.this,mNoteToDelName);
                             AlertDialog.Builder dialogDelete = new AlertDialog.Builder(MainActivity.this)
                                     .setTitle("Confirmed To Delete File ?")
-                                    .setMessage("About To Delete " + mNoteToDelName)
+                                    .setMessage("About To Delete " + noteToDel.getmTitle())
                                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialogInterface, int which) {
                                             Utilities.deleteNoteByName(getApplicationContext(),mNoteToDelName);
-                                            Toast.makeText(MainActivity.this,mNoteToDelName+ "Deleted Successfully",Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(MainActivity.this,noteToDel.getmTitle()+ "Deleted Successfully",Toast.LENGTH_SHORT).show();
                                             Intent newMainActivity = new Intent(MainActivity.this,MainActivity.class);
                                             startActivity(newMainActivity);
                                         }
