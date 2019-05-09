@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     /*
      * obtain references to Button widget and set up listener
-     * @param view the basic building block of GUI */
+     * @param view the basic building block of GUI *//*
     public void buttonPress(View view){
         TextView tv = (TextView) findViewById(R.id.textView);
         EditText et = (EditText) findViewById(R.id.editText);
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             tv.setText(null);
             Snackbar.make(view,"Fill in empty field",Snackbar.LENGTH_SHORT).show();
         }
-    /* to populate the listVie is that when the app is under our resume
+    *//* to populate the listVie is that when the app is under our resume
      * because if have seen the diagram for the Android activity life cycle
      * our resume is always called then you search it in app and everything goes up */
 
